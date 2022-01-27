@@ -28,5 +28,5 @@ def obtain_config(service, env, put_into_environment = False):
         for key, value in config.items():
             key = key.upper()
             os.environ[key] = value
-        print('... the front fell off')
+        print('... aaand the front fell off. Done.')
     return config

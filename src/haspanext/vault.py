@@ -3,7 +3,7 @@ import sys
 import hvac
 import boto3
 
-def obtain_config(service, env):
+def obtain_config(service, env, put_into_environment = True):
     print('Obtaining vault configuration')
     vault = hvac.Client(
         url = 'https://vault.it.paulalex.de'
@@ -23,6 +23,7 @@ def obtain_config(service, env):
     print('The service name is {name}'.format(
         name = config['name']
     ))
-    for key, value in config.items():
-        os.environ[key] = value.upper()
-
+    if put_into_environment:
+        for key, value in config.items():
+            os.environ[key] = value.upper()
+    return config

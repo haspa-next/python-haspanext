@@ -1,3 +1,4 @@
+import os
 import sys
 import hvac
 import boto3
@@ -22,3 +23,6 @@ def obtain_config(service, env):
     print('The service name is {name}'.format(
         name = config['name']
     ))
+    for key, value in config.items():
+        os.environ[key] = value.upper()
+

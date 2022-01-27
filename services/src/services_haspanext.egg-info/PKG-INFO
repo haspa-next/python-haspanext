@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: services-haspanext
+Version: 1.0.0
+Summary: A package used by services to do common setup tasks like initializing service configuration
+Home-page: https://github.com/haspanext/python-haspanext/services
+Author: Sven Casimir
+Author-email: sven.casimir@haspa-next.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Python Services
+
+This package provides configuration and setup scripts that can be used by services to do common service setup and maintenance tasks.
+Like for example obtaining the service configuration from the vault server.
+
+

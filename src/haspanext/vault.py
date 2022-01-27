@@ -3,7 +3,7 @@ import sys
 import hvac
 import boto3
 
-def obtain_config(service, env, put_into_environment = True):
+def obtain_config(service, env, put_into_environment = False):
     print('Obtaining vault configuration')
     vault = hvac.Client(
         url = 'https://vault.it.paulalex.de'

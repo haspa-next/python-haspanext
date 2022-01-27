@@ -24,6 +24,9 @@ def obtain_config(service, env, put_into_environment = False):
         name = config['name']
     ))
     if put_into_environment:
+        print('Putting secrets into the environment')
         for key, value in config.items():
+            print('Putting %s' % key)
             os.environ[key] = value.upper()
+        print('The front fell off')
     return config

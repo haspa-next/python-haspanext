@@ -11,9 +11,9 @@ def obtain_config(service, env, put_into_environment = False):
 
     creds = boto3.Session().get_credentials()
     print('Login via IAM')
-    print(vault.auth.aws.iam_login(
+    vault.auth.aws.iam_login(
         creds.access_key, creds.secret_key, creds.token, role='service-%s-%s-iam' % (service, env), header_value='vault.it.paulalex.de'
-    ))
+    )
 
     print('Downloading vault secrets')
     config = vault.secrets.kv.v1.read_secret(
